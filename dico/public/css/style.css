@@ -1,0 +1,932 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+    body{
+        width: 100%;    
+        display: flex;  
+        flex-direction: column;    
+        justify-content: center;
+        align-items: center;
+        background-color: lightskyblue;
+    }
+
+
+.logo{
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;
+    align-items: center;
+    max-width: 150rem;  
+    width: 100%; 
+   
+}
+
+.logoImg img{
+    width: 20rem;
+    height: 18rem;
+    margin-top: 1.2rem
+    
+}
+.expli{
+    width: 70%;
+    height:20rem;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logoImg{
+    width: 30%;   
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+ h1{
+    font-size: 10.8rem;
+    color:#389ADa;
+    height: 10.4rem
+} 
+h2{
+    font-size:4.8rem;
+    letter-spacing: 0.8rem;
+    height: 6rem;
+}
+.expli h4{
+    height: 3.6rem;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+}
+
+
+
+.navigationC{
+    display: none;
+}
+.container-menu{
+     position: relative; 
+}
+.navigationGb{
+    height: 9.6rem;
+    width: 9.6rem;
+    border-radius: 50%;
+    position: absolute;     
+     top:-12.6rem;
+    right: 2.2rem;     
+    background: #389ADa;
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);    
+}
+.navigationBtn{
+    height:11.4rem ;
+    width:11.4rem ;
+    background-color: #ffff;   
+     position: absolute;
+    z-index: 20000;   
+    top:-13.2rem;
+    right: 2.2rem; 
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+}
+.navigationIcon{
+    position: relative;  
+    margin-top: 5.6rem;
+    width: 4.8rem;
+    height: 0.2rem;
+    background-color: black;
+    display: inline-block;
+}
+.navigationIcon::before{
+    position: absolute;
+    content: '';
+   left: 0;
+   top:-1.28rem;
+   transition: 0.2s;
+    width: 4.8rem;
+    height: 0.2rem;
+    background-color: black;
+  
+
+}
+.navigationIcon::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width:4.8rem;
+    height: 0.2rem;
+    background-color: black;
+    top: 1.28rem;
+  
+
+}
+.nav{
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    z-index: 1500;
+    position: fixed;
+    transition: all 0.8s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.navList{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+.navItem1 a{
+    display: inline-block;
+    margin-top: 1.6rem;
+    font-size: 4.8rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+}
+/* tilde: pour cibler un jumeau qui ne le suit pas vraiment */
+.navigationC:checked ~ .navigationGb{
+
+    transform: scale(80);
+}
+.navigationC:checked ~ .nav{
+opacity: 1;
+width: 80%;
+height: 60vh;
+}
+/*+ je cible l'élément juste après*/
+.navigationC:checked + .navigationBtn .navigationIcon{
+background-color: transparent;
+}
+.navigationC:checked + .navigationBtn .navigationIcon::before{
+  top: 0;
+  transform: rotate(135deg);
+    }
+.navigationC:checked + .navigationBtn .navigationIcon::after{
+        top: 0;
+        transform: rotate(-135deg);
+          }
+    
+        
+        .containerAll{
+            max-width: 164rem;
+            width:85%;
+            height: auto; 
+            border-radius: 12px;
+            margin: 3%;
+            background-color: #F4EBDE;
+        }
+
+.container{
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+}
+.crayon{
+width: 20%;
+
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+}
+.crayon img{
+    width: 75%;
+}
+.sousContainerA{
+    width: 100%;
+    max-width: 164rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    
+   
+}
+.sousContainerB{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.form11{
+    width: 30%;
+     display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+   
+}
+.form1{
+    display: flex;
+    flex-direction: row;
+  
+}
+.form1 p{
+    opacity: 0;
+}
+
+ .nomLabel{
+    color:#EF8517;
+    position: absolute;
+    top:0%;
+    left:3%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    font-size: 3.4rem;
+    cursor: pointer;
+   
+} 
+
+#text{
+   
+    margin: 0;
+    width:25rem;
+    height: 6.4rem;
+    padding: 1.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.2rem solid #EF8517;   
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+    font-size: 2.2rem;
+
+  
+}
+ .choix{
+    position: relative;
+    width:35rem;
+    height:5rem;
+    
+
+} 
+#text:focus + .nomLabel,
+ #text:valid + .nomLabel   
+{
+    top:-40%;
+    left: 0;
+    color: #389ADa;
+    font-size: 1.8rem;
+}
+
+.focuss{
+    position: absolute;
+    bottom: -26%;
+    left: 0;
+    height: 0.4rempx;
+    width:0%;
+    background:#389ADa;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+#text:focus ~ .focuss,
+#text:valid ~ .focus
+{
+    width: 72%;
+}
+#def{
+    width: 7rem;
+    height: 7rem;
+    background-color: #55AB26;
+    border: none;
+    outline: none;
+  border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+.check{
+  
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+   
+
+}
+.labelCkeck{
+    color: #389ADa;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-size: 2rem;
+    width: 15rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #F4EBDE;  
+    box-shadow:  5px 5px 8px #d9d1c6,
+                 -5px -5px 8px #fffff6;
+}
+input[type="radio"]{
+
+border-radius: 0%;
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border: none;
+outline: none;
+border-radius: 0px;
+display: none;
+}
+input[type="radio"]:checked + .labelCkeck{
+    border-radius: 0px;
+    background: #F4EBDE;
+    box-shadow: inset 5px 5px 8px #d9d1c6,
+            inset -5px -5px 8px #fffff6;
+  color:#EF8517;        
+}
+
+.boiteSecrete{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.carreReponse{
+    width: 60%;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+   
+}
+.carreSynonyme{
+    width: 20%;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.traitDashed{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+    height: 60%;
+    border-left:#EF8517 dashed 0.2rem ;
+    border-right:#EF8517 dashed 0.2rem;
+}
+.carreAnthonyme{
+    width:20%;
+    height: 36rem;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+.boiteSecrete ul{
+    display: flex;
+}
+.liMot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#389ADa;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-left: 1.6rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: #F4EBDE;
+    box-shadow:  5px 5px 8px #d9d1c6,
+                 -5px -5px 8px #fffff6;
+
+}
+
+.motUn{
+    background: #F4EBDE;
+    box-shadow: inset 5px 5px 8px #d9d1c6,
+            inset -5px -5px 8px #fffff6;
+    color:#EF8517;
+}
+#definition{
+    margin-top: 1.2rem;
+    margin-right: 8rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    background: #F4EBDE;
+    box-shadow: inset 5px 5px 10px #d9d1c6,
+                inset -5px -5px 10px #fffff6;
+  }      
+.defDuMot{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center; 
+    color: #55AB26;
+    font-weight: bold;
+    font-size: 2.6rem;
+}
+#leMotChoisis{
+    width: 22rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    margin-left: 0.8rem;
+    border-radius: 0px;
+background: #F4EBDE;
+box-shadow: inset 5px 5px 6px #e3dbce,
+            inset -5px -5px 6px #fffbee;
+            text-align: center;
+}
+.defDuMotFlex{
+    display: flex;
+}
+#reponseBtn{
+    width: 7rem;
+    height: 7rem;
+    align-self: center;
+    background-color: #55AB26;
+    border: none;
+    outline: none;
+  border-radius:30% 70% 70% 30% / 30% 30% 70% 70%; 
+}
+.titre{
+    font-size:2.8rem;
+    color: #55AB26;
+    font-weight: bold;
+    margin-bottom: 1.4rem;
+}
+.synonyme1 {
+    width: 22.5rem;
+    height:22.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 5px 5px 10px #d9d1c6,
+                inset -5px -5px 10px #fffff6;
+}
+.synonyme1 div{
+    padding-bottom: 0.8rem;
+    font-size:2.2rem ;
+}
+.ant1 div{
+    padding-bottom: 0.8rem;
+    font-size:2.2rem ;
+}
+.ant1{
+    width:22.5rem;
+    height: 22.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 5px 5px 10px #d9d1c6,
+                inset -5px -5px 10px #fffff6;
+}
+.bienvenue{
+    text-align: center;
+    font-size: 6.4rem;
+}
+.retourne{
+    width: 100%;
+    max-width: 164rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.bouton1,.bouton2,.bouton3{
+    width: 12rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color:#EF8517 ;
+    color:white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+}
+.containerMot{
+    width: 90%;
+    max-width: 1640px;
+    height: auto;
+    flex-wrap: wrap;  
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 5%;  
+  
+   
+}
+i{
+    cursor: pointer;
+}
+.block{
+    width: 490px;
+     height: 50px;    
+    /* display: flex;
+    flex-direction:column ;
+    justify-content:flex-start;
+    align-items: center; */
+     overflow: hidden; 
+    transition: all 1s ease;
+    margin: 0.5%;
+    border-radius: 4px;
+    background: #F4EBDE;
+    box-shadow:  6px 6px 4px #efe6da,
+                 -6px -6px 4px #f9f0e2;
+}
+.block p{
+    text-align: center;
+    height: auto;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+.active{
+   height: auto; 
+}
+.active1{
+    display: none;
+ }
+.contentHaut{
+   height: 50px;   
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.6rem;
+    overflow: hidden;
+}
+.contentHaut .textDefinition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentHaut a{
+    align-items: flex-end;
+}
+.contentHaut h4{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1000;
+}
+.contentHaut i{
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+.contentTitre{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.partie3{
+    width: 98%;
+     height: auto;
+    max-width: 164rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;  
+    border-radius: 8px;
+    display: none;
+    border-radius: 17px;
+background: #F4EBDE;
+box-shadow:  6px 6px 4px #efe6da,
+             -6px -6px 4px #f9f0e2;
+             margin-top: 5%;
+             margin-bottom: 5%;
+}
+.fa-power-off{
+    font-size: 5rem;
+    cursor: pointer;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.contentTitre h4{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+}
+
+.partie33{
+    display: block;
+    
+}
+
+.partie4{
+    width: 98%;
+  height: auto;
+    max-width: 164rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    display: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 17px;
+    background: #F4EBDE;
+    box-shadow:  6px 6px 4px #efe6da,
+                 -6px -6px 4px #f9f0e2;
+}
+.partie44{
+    display: block;
+}
+.partie5{
+    width: 98%;
+    height: auto;
+    max-width: 164rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    display: none;  
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 17px;
+    background: #F4EBDE;
+    box-shadow:  6px 6px 4px #efe6da,
+                 -6px -6px 4px #f9f0e2;
+}
+.partie55{
+    display: block;
+}
+.partie3 p{
+    color: black;
+}
+.containerBox{
+    margin: 0.6rem;
+    
+}
+.containerBox .card{
+    /* margin: 5%; */
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+}
+.containerBox .card .face{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.containerBox .card .face.face1{
+
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform-origin: bottom;
+}
+.containerBox .card .face.face1 h3{
+    margin: 1rem 0 0;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    
+}
+.containerBox .card:hover .face.face1{
+    transform: translateY(-100%) rotateX(90deg);
+    background: #389ADa;
+}
+.containerBox .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+    width: 40rem;
+    height: 25rem;
+    position: relative;
+}
+.face2 img{
+    width: 100%;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    z-index: -100;
+    width: 40rem;
+    height: 25rem;
+    background-size: cover;
+}
+.containerBox .card:hover .face.face2{
+    transform: translateY(0) rotateX(0);
+}
+
+.motAuPseudo{
+    text-align: center;
+    color:#389ADa;
+    font-size: bold;
+    letter-spacing: 0.4rem;
+    font-size: 2.2rem;
+}
+.suppr{
+    text-decoration: none;  
+    background-color:#55AB26 ;
+    color: white;
+    width:100%;
+    height: 2.2rem;
+    border-radius: 0.4rem;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.suppr a{
+    text-decoration: none;
+    
+}
+
+@media (max-width: 1404px) {
+.sousContainerA{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.sousContainerB{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+.carreReponse{
+    width: 100%;
+}
+.carreSynonyme{
+    width: 100%;
+}
+.carreAnthonyme{
+    width: 100%;
+}
+.crayon{
+    display: none;
+}
+#definition{
+    width: 80rem;
+    height: 40rem;
+}
+.synonyme1{
+    width: 80rem;
+    height: 40rem;
+}
+.ant1{
+    width: 80rem;
+    height: 40rem;
+}
+
+}
+@media (max-width: 1583px){
+    .logoImg{
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1362px){
+    html{
+        font-size: 8px;
+    }
+    .containerAll{
+        height: auto;
+        padding: 5%;
+    }
+    .boiteSecrete{
+       width: 100%;
+       justify-content: center;
+    }
+    .liMot{
+        width: 30rem;
+        height: 30rem;
+    }
+    .navigationC:checked ~ .nav {
+        width: 1362px;
+    }
+    #definition{
+        width: 100%;
+       
+    }
+}
+@media (max-width: 1277px){
+    html{
+        font-size: 8px;
+    }
+    .navigationC:checked ~ .nav {
+        width: 1277px;
+    }
+    .boiteSecrete ul{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .liMot{
+        border-radius: 0;
+        width: 85%;
+        height: 90px;
+        font-size: 5rem;
+    }
+    #definition{
+width: 100%;
+font-size: 3rem;
+    }
+    .synonyme1{
+width: 85%;
+font-size: 4rem;
+    }
+    .ant1{
+width: 85%;
+    }
+    .ant1 div {
+       
+        font-size: 4rem;
+    }
+    .synonyme1 div {
+       
+        font-size: 4rem;
+    }
+    .containerBox .card {
+      
+        width: 80rem;
+        height: 40rem;
+    }
+    #leMotChoisis{
+        font-size: 4rem;
+        width: 28rem;
+    height: 5rem;
+    }
+    #text{
+        font-size: 4rem;
+    }
+    .defDuMot p{
+        font-size: 5rem;
+    }
+    .titre{
+        font-size: 5rem;
+    }
+    .motAuPseudo{
+        font-size: 5rem;
+    }
+    .content{
+        font-size: 5rem;
+    }
+}
+@media(max-width:1183px){
+    .navigationC:checked ~ .nav {
+        width: 1183px;        
+    }
+    html{
+        font-size: 7px;
+    }
+    
+}
+
+@media(max-width:1148px){
+    html{
+        font-size: 6px;
+    }
+    .navigationC:checked ~ .nav {
+        width: 1034px;
+    }    
+    
+}
+@media(max-width:891px){
+    html{
+        font-size: 5px;
+    }
+     .navigationC:checked ~ .nav {
+         width: 1034px;
+     }    
+     
+ }

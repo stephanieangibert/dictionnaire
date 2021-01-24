@@ -1,0 +1,98 @@
+
+
+
+.containerIndex2 span{
+    color: black;
+    font-family: 'Nerko One', cursive; 
+    font-size: 4rem;    
+    transition:all 4s;
+    opacity: 0; 
+    animation:artifice forwards 4s;
+    
+}
+@keyframes artifice{
+    0%{
+opacity:0;
+top:100%;
+left:40%;
+position: absolute;   
+
+    }
+    33%{
+        opacity: 1;
+        top:30%;
+        left:40%;  
+        position: absolute;        
+    }
+    66%{
+        opacity: 1;
+        top:60%;
+        left:40%;
+        position: absolute;
+       
+    }
+    
+    100%{
+        opacity: 1;
+        top:50%;
+        left:40%;
+     
+       
+    }
+
+}
+ 
+.containerIndex2{
+    width: 58%;
+    height:50%;   
+    
+   
+    
+}
+.concept{
+    width: 100%;
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color:#F4EBDE;
+  
+}
+.flag{
+    color: black;
+    width: 30rem;
+    height: 10rem; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 120%;
+    font-family: 'Nerko One', cursive; 
+}
+h4{
+    padding-right: 0.4rem;
+}
+.partie3{
+    width: 98%;
+    /* height: 80vh; */
+    max-width: 164rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid black 0.2rem;
+    margin: 0 auto;
+
+}
+.partie3 p{
+    color: black;
+}
+/*  */
+.form3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* //connexion */
